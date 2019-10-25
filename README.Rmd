@@ -1,0 +1,41 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- devtools::rmarkdown::render("README.Rmd") -->
+<!-- Rscript -e "library(knitr); knit('README.Rmd')" -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# Run [`wikit`](https://www.npmjs.com/package/wikit) with `outsider` in R
+
+[![Build Status](https://travis-ci.org/dombennett/om..wikit.svg?branch=master)](https://travis-ci.org/dombennett/om..wikit)
+
+## Easy to install
+
+```{r install-wikit, eval=FALSE, include=TRUE}
+library(outsider)
+module_install(repo = "dombennett/om..wikit")
+module_help(repo = "dombennett/om..wikit")
+```
+
+See [`outsider`](https://github.com/AntonelliLab/outsider) documentation for
+more information.
+
+
+## Look-up [Wikipedia](https://en.wikipedia.org) summaries from within R
+
+```{r run-wikit, eval=TRUE, include=TRUE}
+library(outsider)
+wikit <- module_import(fname = 'wikit', repo = 'dombennett/om..wikit')
+# see all examples
+dinosaur_summary <- wikit('dinosaur', ncols = 80)
+cat(dinosaur_summary)
+```

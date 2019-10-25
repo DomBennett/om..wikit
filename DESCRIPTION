@@ -1,0 +1,13 @@
+Package: om..wikit
+Type: Package
+Version: 0.0.1
+Title: Outsider module for running wikit
+Description: Install and run wikit from within R.
+Encoding: UTF-8
+Depends:
+    R (>= 3.6.0)
+Imports:
+    outsider.base
+Suggests:
+    outsider
+RoxygenNote: 6.1.1
